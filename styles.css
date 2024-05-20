@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: "Arvo";
   src: url(./font/Arvo/Arvo-Bold.ttf) format("truetype");
@@ -12,10 +13,7 @@ body {
   background-image: url(./images/background/pexels-hngstrm-1939485.jpg);
   background-size: cover;
   overflow-x: hidden;
-
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
+  font-family: "Arvo";
 }
 
 /* ---- ANIMATION CODE ---- */
@@ -24,12 +22,18 @@ body {
   text-align: center;
   background-color: #e63946;
   font-family: "Arvo";
-
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
+}
+.main-logo {
+  width: 150px;
+  border-radius: 50%;
+  border: none;
 }
 
 .roller {
@@ -42,9 +46,17 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 4rem;
-
-  color: black;
   color: #a8dadc;
+}
+
+.first-name {
+  color: whitesmoke;
+}
+.second-name {
+  color: black;
+}
+.third-name {
+  color: orange;
 }
 
 .roller #rolltext {
@@ -63,11 +75,7 @@ body {
   50% {
     top: -8rem;
   }
-  /* 72.5% {
-    top: -12.25rem;
-  } */
 }
-/* RESPONSIVE ANIMATION CODE  */
 
 @media screen and (max-width: 600px) {
   .roller {
@@ -90,11 +98,9 @@ body {
     50% {
       top: -4.25rem;
     }
-    /* 72.5%{
-    top: -6.375rem;
-  } */
   }
 }
+
 /* -------------------------------------- */
 
 .main-content {
@@ -103,19 +109,18 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* margin: 0 auto; */
   height: 100vh;
   width: 100vw;
   background-color: white;
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   gap: 2rem;
-  /* padding: 2rem; */
+  padding: 2rem;
+  text-align: center;
 }
-/* 
-/*  */
+
 .contact-header {
-  font-size: 58px;
+  font-size: 2.5rem;
   background-color: black;
   color: white;
   padding: 0.5rem;
@@ -124,33 +129,34 @@ body {
 
 ul {
   list-style: none;
+  padding: 0;
 }
+
 li {
-  margin-bottom: 2rem;
-  font-size: 22px;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.main-heading {
-  /* flex: 0 0 100%; */
 
+.projects {
+  width: 100vw;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  padding: 2rem 0;
+  text-align: center; /* Centering the heading */
+}
+
+.main-heading {
   text-align: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
-.projects {
-  width: 100vw;
-  height: 300vh;
-  background-color: black;
-  color: white;
-  font-size: 32px;
-}
+
 .projects-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* flex-wrap: wrap; */
-  /* justify-content: center;
-  flex-direction: row; */
-  gap: 1rem;
+  gap: 2rem; /* Increased gap */
   align-items: center;
 }
 
@@ -162,24 +168,54 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap */
 }
-img {
-  width: 250px;
-  /* height: 250px; */
-  /* height: 100px; */
-}
+
 .projects-header {
   text-align: center;
-  font-size: 28px;
-  background-color: lightgreen;
+  font-size: 1.75rem;
+  background-color: white;
+  color: black;
   padding: 0.5rem;
-  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-   */
   font-family: "bodoni-moda";
+  width: auto; /* Ensuring it does not take the entire screen width */
 }
+
 .images {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  gap: 1.5rem; /* Increased gap */
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+  .contact-header {
+    font-size: 2rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .projects-header {
+    font-size: 1.5rem;
+  }
+
+  .projects-content {
+    grid-template-columns: 1fr;
+  }
+
+  .images {
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 100%;
+  }
 }
