@@ -30,6 +30,19 @@ body {
   height: 100vh;
   width: 100vw;
 }
+.certificate {
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+}
+.certificate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-certificate {
+  width: 550px;
+}
 .main-logo {
   width: 150px;
   /* border-radius: 50%; */
@@ -205,6 +218,9 @@ img {
 
   .projects-header {
     font-size: 1.5rem;
+  }
+  .img-certificate {
+    width: 350px;
   }
 
   .projects-content {
